@@ -6,10 +6,13 @@ import string
 numNodes = 0
 numBeams = 0
 numRestraints = 0
+numPreloads = 0
+forceDensityLoadCaseID = 0
+
 nodesT=[]
 beamsT=[]
 restraintsT=[]
-
+beamPreloadsT=[]
 
 #Apertura del file contenente le informazioni    
 f= open("Mesh1.txt", 'r')
@@ -26,6 +29,7 @@ for i in range(0, len(file)):
     if len(rigaSplitted)==0:
             continue
 
+
     #Ad ogni riga contenente 'Node' viene riportato il testo del file in array
     if rigaSplitted[0] == "Node":
         numNodes= numNodes + 1
@@ -38,26 +42,37 @@ for i in range(0, len(file)):
 
     if rigaSplitted[0] == "Beam":
         numBeams= numBeams + 1
-        # Estrapolo gli elementi relativi alle coordinate
+        # Estrapolo la connettività asta
         idBeam = int(rigaSplitted[1])
         node1= int(rigaSplitted[5])
         node2= int(rigaSplitted[6])
         # aggiungo righe a matrice aste
-        beamsT.append([idBeam,node1,node2])
+        beamsT.append([idBeam, node1, node2])
         print(beamsT[-1])
 
-    if rigaSplitted[0] == "Beam":
-        numBeams= numBeams + 1
-        # Estrapolo gli elementi relativi alle coordinate
-        idBeam = int(rigaSplitted[1])
-        node1= int(rigaSplitted[5])
-        node2= int(rigaSplitted[6])
-        # aggiungo righe a matrice aste
-        beamsT.append([idBeam,node1,node2])
-        print(beamsT[-1])
+    if rigaSplitted[0] == "LoadCase":
+        loadCaseName = rigaSplitted[3]
+        if loadCaseName=="\"force_densities\"":
+            forceDensityLoadCaseID=int(rigaSplitted[1])
+            print(["forceDensityLoadCaseID = ", forceDensityLoadCaseID])
 
+
+    if rigaSplitted[0] == "BmPreLoad":
+        loadCaseID = rigaSplitted[1]
+
+        if loadCaseID==forceDensityLoadCaseID:
+
+            numPreloads= numPreloads + 1
+            # Estrapolo i pre force
+            idBeamPreload = int(rigaSplitted[1])
+            idBeam= int(rigaSplitted[2])
+            forceDensityValue= float(rigaSplitted[4])
+            # aggiungo righe a matrice precarichi
+            beamPreloadsT.append([idBeam, forceDensityValue])
+            print(beamPreloadsT[-1])
 
     """
+   
     #Stessa cosa per gli elementi   
     if "BEAM ELEMENTS" in rigaFile:
         print("\n BEAM ELEMENTS:\n")
