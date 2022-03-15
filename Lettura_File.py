@@ -29,23 +29,35 @@ for i in range(0, len(file)):
     #Ad ogni riga contenente 'Node' viene riportato il testo del file in array
     if rigaSplitted[0] == "Node":
         numNodes= numNodes + 1
-        idNodo = float(rigaSplitted[1])
+        idNodo = int(rigaSplitted[1])
         # Estrapolo gli elementi relativi alle coordinate
         coordXYZ=list(np.float_(rigaSplitted[3:6]))       #float(rigaSplitted[3:6])
         # aggiungo righe a matrice nodi
         nodesT.append([idNodo] + coordXYZ)
-        print(nodesT[numNodes - 1])
-        """
+        print(nodesT[-1])
 
-    #if rigaSplitted[0] == "Beam":
+    if rigaSplitted[0] == "Beam":
         numBeams= numBeams + 1
-        idNodo = float(rigaSplitted[1])
         # Estrapolo gli elementi relativi alle coordinate
-        coordXYZ=list(np.float_(rigaSplitted[3:6]))       #float(rigaSplitted[3:6])
-        # aggiungo righe a matrice nodi
-        nodesT.append([idNodo] + coordXYZ)
-        print(nodesT[numNodes - 1])
+        idBeam = int(rigaSplitted[1])
+        node1= int(rigaSplitted[5])
+        node2= int(rigaSplitted[6])
+        # aggiungo righe a matrice aste
+        beamsT.append([idBeam,node1,node2])
+        print(beamsT[-1])
 
+    if rigaSplitted[0] == "Beam":
+        numBeams= numBeams + 1
+        # Estrapolo gli elementi relativi alle coordinate
+        idBeam = int(rigaSplitted[1])
+        node1= int(rigaSplitted[5])
+        node2= int(rigaSplitted[6])
+        # aggiungo righe a matrice aste
+        beamsT.append([idBeam,node1,node2])
+        print(beamsT[-1])
+
+
+    """
     #Stessa cosa per gli elementi   
     if "BEAM ELEMENTS" in rigaFile:
         print("\n BEAM ELEMENTS:\n")
