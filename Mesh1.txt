@@ -1,0 +1,377 @@
+/ ______________________________________________________________________________
+/ Straus7 MODEL EXCHANGE FILE
+/ TIMESTAMP: 6:03:02 pm, 15 marzo 2022
+
+/ ______________________________________________________________________________
+/ MODEL INFORMATION
+
+   FileFormat           Straus7.2.4.6
+   ModelName            "Mesh1"
+   Title                ""
+   Project              ""
+   Author               ""
+   Reference            ""
+   Comments             ""
+
+/ ______________________________________________________________________________
+/ UNITS
+
+   LengthUnit           m
+   MassUnit             kg
+   EnergyUnit           J
+   PressureUnit         kPa
+   ForceUnit            kN
+   TemperatureUnit      C
+
+/ ______________________________________________________________________________
+/ GROUP DEFINITIONS
+
+   Group                    1    16711680   "\\Model"
+
+/ ______________________________________________________________________________
+/ FREEDOM CASE DEFINITIONS
+
+   FreedomCase              1       0       1   "Freedom Case 1"
+    
+
+/ ______________________________________________________________________________
+/ LOAD CASE DEFINITIONS
+
+   LoadCase                 1       0   "Load Case 1"
+     LCInclude              3 
+
+
+/ ______________________________________________________________________________
+/ COORDINATE SYSTEM DEFINITIONS
+
+   CoordSys                 1   "Global XYZ"  GlobalXYZ
+
+
+/ ______________________________________________________________________________
+/ NODE COORDINATES
+
+   Node                     1       0     0.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+   Node                     2       0     1.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+   Node                     3       0     2.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+   Node                     4       0     3.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+   Node                     5       0     4.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+   Node                     6       0     5.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+   Node                     7       0     0.00000000000000E+0      1.00000000000000E+0      0.00000000000000E+0  
+   Node                     8       0     0.00000000000000E+0      2.00000000000000E+0      0.00000000000000E+0  
+   Node                     9       0     0.00000000000000E+0      3.00000000000000E+0      0.00000000000000E+0  
+   Node                    10       0     0.00000000000000E+0      4.00000000000000E+0      0.00000000000000E+0  
+   Node                    11       0     0.00000000000000E+0      5.00000000000000E+0      0.00000000000000E+0  
+   Node                    12       0     1.00000000000000E+0      1.00000000000000E+0      0.00000000000000E+0  
+   Node                    13       0     1.00000000000000E+0      2.00000000000000E+0      0.00000000000000E+0  
+   Node                    14       0     1.00000000000000E+0      3.00000000000000E+0      0.00000000000000E+0  
+   Node                    15       0     1.00000000000000E+0      4.00000000000000E+0      0.00000000000000E+0  
+   Node                    16       0     1.00000000000000E+0      5.00000000000000E+0      0.00000000000000E+0  
+   Node                    17       0     2.00000000000000E+0      1.00000000000000E+0      0.00000000000000E+0  
+   Node                    18       0     2.00000000000000E+0      2.00000000000000E+0      0.00000000000000E+0  
+   Node                    19       0     2.00000000000000E+0      3.00000000000000E+0      0.00000000000000E+0  
+   Node                    20       0     2.00000000000000E+0      4.00000000000000E+0      0.00000000000000E+0  
+   Node                    21       0     2.00000000000000E+0      5.00000000000000E+0      0.00000000000000E+0  
+   Node                    22       0     3.00000000000000E+0      1.00000000000000E+0      0.00000000000000E+0  
+   Node                    23       0     3.00000000000000E+0      2.00000000000000E+0      0.00000000000000E+0  
+   Node                    24       0     3.00000000000000E+0      3.00000000000000E+0      0.00000000000000E+0  
+   Node                    25       0     3.00000000000000E+0      4.00000000000000E+0      0.00000000000000E+0  
+   Node                    26       0     3.00000000000000E+0      5.00000000000000E+0      0.00000000000000E+0  
+   Node                    27       0     4.00000000000000E+0      1.00000000000000E+0      0.00000000000000E+0  
+   Node                    28       0     4.00000000000000E+0      2.00000000000000E+0      0.00000000000000E+0  
+   Node                    29       0     4.00000000000000E+0      3.00000000000000E+0      0.00000000000000E+0  
+   Node                    30       0     4.00000000000000E+0      4.00000000000000E+0      0.00000000000000E+0  
+   Node                    31       0     4.00000000000000E+0      5.00000000000000E+0      0.00000000000000E+0  
+   Node                    32       0     5.00000000000000E+0      1.00000000000000E+0      0.00000000000000E+0  
+   Node                    33       0     5.00000000000000E+0      2.00000000000000E+0      0.00000000000000E+0  
+   Node                    34       0     5.00000000000000E+0      3.00000000000000E+0      0.00000000000000E+0  
+   Node                    35       0     5.00000000000000E+0      4.00000000000000E+0      0.00000000000000E+0  
+   Node                    36       0     5.00000000000000E+0      5.00000000000000E+0      0.00000000000000E+0  
+
+/ ______________________________________________________________________________
+/ BEAM ELEMENTS
+
+   Beam                     1       0       1       1       1       7 
+   Beam                     2       0       1       1       7       8 
+   Beam                     3       0       1       1       8       9 
+   Beam                     4       0       1       1       9      10 
+   Beam                     5       0       1       1      10      11 
+   Beam                     6       0       1       1       2      12 
+   Beam                     7       0       1       1      12      13 
+   Beam                     8       0       1       1      13      14 
+   Beam                     9       0       1       1      14      15 
+   Beam                    10       0       1       1      15      16 
+   Beam                    11       0       1       1       3      17 
+   Beam                    12       0       1       1      17      18 
+   Beam                    13       0       1       1      18      19 
+   Beam                    14       0       1       1      19      20 
+   Beam                    15       0       1       1      20      21 
+   Beam                    16       0       1       1       4      22 
+   Beam                    17       0       1       1      22      23 
+   Beam                    18       0       1       1      23      24 
+   Beam                    19       0       1       1      24      25 
+   Beam                    20       0       1       1      25      26 
+   Beam                    21       0       1       1       5      27 
+   Beam                    22       0       1       1      27      28 
+   Beam                    23       0       1       1      28      29 
+   Beam                    24       0       1       1      29      30 
+   Beam                    25       0       1       1      30      31 
+   Beam                    26       0       1       1       6      32 
+   Beam                    27       0       1       1      32      33 
+   Beam                    28       0       1       1      33      34 
+   Beam                    29       0       1       1      34      35 
+   Beam                    30       0       1       1      35      36 
+   Beam                    31       0       1       1       1       2 
+   Beam                    32       0       1       1       2       3 
+   Beam                    33       0       1       1       3       4 
+   Beam                    34       0       1       1       4       5 
+   Beam                    35       0       1       1       5       6 
+   Beam                    36       0       1       1       7      12 
+   Beam                    37       0       1       1      12      17 
+   Beam                    38       0       1       1      17      22 
+   Beam                    39       0       1       1      22      27 
+   Beam                    40       0       1       1      27      32 
+   Beam                    41       0       1       1       8      13 
+   Beam                    42       0       1       1      13      18 
+   Beam                    43       0       1       1      18      23 
+   Beam                    44       0       1       1      23      28 
+   Beam                    45       0       1       1      28      33 
+   Beam                    46       0       1       1       9      14 
+   Beam                    47       0       1       1      14      19 
+   Beam                    48       0       1       1      19      24 
+   Beam                    49       0       1       1      24      29 
+   Beam                    50       0       1       1      29      34 
+   Beam                    51       0       1       1      10      15 
+   Beam                    52       0       1       1      15      20 
+   Beam                    53       0       1       1      20      25 
+   Beam                    54       0       1       1      25      30 
+   Beam                    55       0       1       1      30      35 
+   Beam                    56       0       1       1      11      16 
+   Beam                    57       0       1       1      16      21 
+   Beam                    58       0       1       1      21      26 
+   Beam                    59       0       1       1      26      31 
+   Beam                    60       0       1       1      31      36 
+
+/ ______________________________________________________________________________
+/ NODE RESTRAINTS (ROTATION AS RADIAN)
+/ Freedom Case 1
+   NdFreedom                1       1       1       DX  DY  DZ            
+   NdFreedom                1       2       1       DX  DY  DZ            
+   NdFreedom                1       3       1       DX  DY  DZ            
+   NdFreedom                1       4       1       DX  DY  DZ            
+   NdFreedom                1       5       1       DX  DY  DZ            
+   NdFreedom                1       6       1       DX  DY  DZ            
+   NdFreedom                1       7       1       DX  DY  DZ            
+   NdFreedom                1       8       1       DX  DY  DZ            
+   NdFreedom                1       9       1       DX  DY  DZ            
+   NdFreedom                1      10       1       DX  DY  DZ            
+   NdFreedom                1      11       1       DX  DY  DZ            
+   NdFreedom                1      16       1       DX  DY  DZ            
+   NdFreedom                1      21       1       DX  DY  DZ            
+   NdFreedom                1      26       1       DX  DY  DZ            
+   NdFreedom                1      31       1       DX  DY  DZ            
+   NdFreedom                1      32       1       DX  DY  DZ            
+   NdFreedom                1      33       1       DX  DY  DZ            
+   NdFreedom                1      34       1       DX  DY  DZ            
+   NdFreedom                1      35       1       DX  DY  DZ            
+   NdFreedom                1      36       1       DX  DY  DZ            
+
+/ ______________________________________________________________________________
+/ BEAM PROPERTIES
+
+   BeamProp                 1    16737843   "Beam Property 1"
+     MaterialName       "Unknown Material"
+     UsePoisson         TRUE
+     InstantAlpha       FALSE
+     SectionType        Null
+     TimeDependentMod   Elastic
+     UseMomCurv         FALSE
+     NonLinType         Elasticplastic
+     Hardening          Isotropic
+
+
+/ ______________________________________________________________________________
+/ LINEAR STATIC SOLVER DATA
+
+   LoadFreedomSetLSA        1   ON
+      1 
+
+
+/ ______________________________________________________________________________
+/ LINEAR BUCKLING SOLVER DATA
+
+   BuckNumModes             4 
+
+   BuckShift              0.00000000000000E+0  
+
+
+/ ______________________________________________________________________________
+/ LOAD INFLUENCE SOLVER DATA
+
+   LoadFreedomSetLIA        1   ON
+      1 
+
+
+/ ______________________________________________________________________________
+/ NATURAL FREQUENCY SOLVER DATA
+
+   FreqNumModes             4 
+
+   FreqShift              0.00000000000000E+0  
+
+   FreqIncludeNSMass        1 
+
+   FreqModeParticipation   FALSE
+    0.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+    0.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+    0.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0  
+
+
+/ ______________________________________________________________________________
+/ HEAT SOLVER DATA
+
+   LoadSetHeat              1 
+
+   HeatTempLoadCase         1 
+
+   HeatNonlinear        FALSE
+
+
+/ ______________________________________________________________________________
+/ GENERAL SOLVER DATA
+
+   SolverTempDependence   None
+
+   SolverLoadCaseTempDependence       0 
+
+   SolverActiveStage        0 
+
+   SturmCheck           FALSE
+
+   SolverFreedomCase        1 
+
+   ModalLoadType        BaseAcceleration
+
+   ModalNodeReactType   Element
+
+   DampingType          Rayleigh
+
+   RayleighFactors      Frequency
+    0.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0      0.00000000000000E+0      1.00000000000000E-2      1.00000000000000E-2  
+
+   NonLinearGeometry    TRUE
+
+   NonLinearMaterial    TRUE
+
+   IncludeCreep         FALSE
+
+
+   SolverDefaultsGeneral 
+     SolDefMatrixZeroDiag     1.00000000000000E-20 
+     SolDefConjGradTol      1.00000000000000E-5  
+     SolDefMaxConjGradIter    5000 
+     SolDefMaxNumWarnings      10 
+     SolDefWindowState        3 
+     SolDefReducedLogFile   TRUE
+     SolDefDoResidualsCheck   FALSE
+     SolDefSuppressAllSingularities   FALSE
+
+   SolverDefaultsElements 
+     SolDefMinDimension     1.00000000000000E-9  
+     SolDefMinInternalAngle     1.50000000000000E+1  
+     SolDefZeroPointForce     1.00000000000000E-6  
+     SolDefZeroDiagonal     1.00000000000000E-20 
+     SolDefBeamMass       Lumped
+     SolDefPlateMass      Lumped
+     SolDefBrickMass      Lumped
+     SolDefBeamLoads      Consistent
+     SolDefPlateLoads     Consistent
+     SolDefBeamSlices         5 
+     SolDefIncludeLinkReactions   TRUE
+
+   SolverDefaultsDrilling 
+     SolDefZeroTrans        1.00000000000000E-8  
+     SolDefZeroRot          1.00000000000000E-6  
+     SolDrillStiffMult      1.00000000000000E-4  
+     SolDrillZeroEig        1.00000000000000E-6  
+     SolDefMaxNormalsAngle     5.00000000000000E+0  
+     SolDefForceDrillingCheck   FALSE
+
+   SolverDefaultsIteration 
+     SolDefZeroDisp         1.00000000000000E-8  
+     SolDefDispNormTol      1.00000000000000E-4  
+     SolDefResidualsNormTol     1.00000000000000E-3  
+     SolDefNonlinIterLimit      20 
+     SolDefAddIterations   TRUE
+     SolDefMaxUpdateInterval       5 
+     SolDefMaxDispChange     1.00000000000000E+0  
+     SolDefMaxResidualChange     1.00000000000000E-1  
+     SolDefFormStiffnessMatrix       0 
+     SolDefFormHeatStiffnessMatrix       2 
+     SolDefHeatConvergenceTol     1.00000000000000E-5  
+     SolDefHeatRelaxationFactor     6.66670000000000E-1  
+     SolDefNonlinHeatIterLimit      20 
+
+   SolverDefaultsSubSteps 
+     SolDefSubStepping        0 
+     SolDefMinLoadReductionFactor     1.00000000000000E-1  
+     SolDefMaxRot           3.00000000000000E+1  
+     SolDefMaxDispRatio     1.00000000000000E-1  
+     SolDefMinArcLength     1.00000000000000E-3  
+     SolDefMaxFibreInc      1.00000000000000E-2  
+     SolDefSaveSubIncrements   FALSE
+     SolDefDynamicAutoSteppingMode       0 
+     SolDefMinTimeStep      1.00000000000000E-3  
+     SolDefConsiderTableSteps  FALSE 
+     SolDefSingleShotRestart  FALSE 
+     SolDefAutoAssignPathDiv  FALSE 
+
+   SolverDefaultsNonlinear 
+     SolDefIncludeKG      TRUE
+     SolDefAutoScaleKg   TRUE 
+     SolDefIgnoreCompressiveBeamKg  FALSE 
+     SolDefBeamKgType     Simplified
+     SolDefFiniteStrainDefinition   Nominal
+     SolDefBeamLength     Initial
+     SolDefRatioMNL         5.00000000000000E-1  
+     SolDefZeroContactFactor     1.00000000000000E-6  
+     SolDefSlidingFriction     1.00000000000000E-15 
+     SolDefStickingFriction     1.00000000000000E+0  
+     SolDefFrictionCutoffStrain     1.00000000000000E-5  
+     SolDefScaleSupports  TRUE 
+
+   SolverDefaultsCreep 
+     SolDefTimeStepParam     5.00000000000000E-1  
+     SolDefMinViscoUnits       3 
+     SolDefMaxViscoUnits       6 
+     SolDefCurveFitTime     1.00000000000000E+4  
+     SolDefCurveFitTimeUnit   d
+     SolDefSpacingBias      5.00000000000000E-1  
+     SolDefDoInstantNTA  TRUE 
+
+   SolverDefaultsEigenvalue 
+     SolDefZeroFreq         1.00000000000000E-6  
+     SolDefZeroBuckEigenvalue     1.00000000000000E-10 
+     SolDefExpandWorkingSetBy       6 
+     SolDefEigIterLimit      20 
+     SolDefEigIterTol       1.00000000000000E-5  
+     SolDefEigAutoShift  FALSE 
+
+   SolverDefaultsDynamics 
+     SolDefWilsonTheta      1.37000000000000E+0  
+     SolDefNewmarkBeta      5.00000000000000E-1  
+     SolDefTransientMethod   Newmark
+     SolDefExcludeMassComponents 
+     SolDefIncludeRotMass   TRUE
+
+
+
+/ ______________________________________________________________________________
+/ RESULT OPTIONS
+
+   ResultOptions      
+     ResOptsRotationUnit   Degrees
+     ResOptsHRADisplacement   Total
+     ResOptsHRAVelocity   Total
+     ResOptsHRAAcceleration   Relative
+     ResOptsBeamForceMoment   Principal
+     ResOptsStageDisplacement   BirthStage
