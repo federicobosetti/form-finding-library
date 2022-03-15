@@ -2,44 +2,69 @@ import numpy as np
 import pandas as pd
 import string 
 
+#definizione matrici vuote e contatori nodi / aste / vincoli eccetera
+numNodes = 0
+numBeams = 0
+numRestraints = 0
+nodesT=[]
+beamsT=[]
+restraintsT=[]
+
+
 #Apertura del file contenente le informazioni    
-f= open("C:/dev/Mesh1.txt", 'r')
+f= open("Mesh1.txt", 'r')
 #Lettura di ogni riga del file
 file=f.readlines()
-#Ordino il file dalla riga 0 all'ultima riga
+#LEGGO il file dalla riga 0 all'ultima riga
+
+
+
 for i in range(0, len(file)):
-    RigaFile=file[i]
-    #Alla stringa contenente "NODE COORDINATES" sostituisco il nome stesso
-    #come intestazione dei nodi
-    if "NODE COORDINATES" in RigaFile:
-        print("\n NODE COORDINATES:\n")
+    rigaFile=file[i]
+    rigaSplitted = rigaFile.split()
+
+    if len(rigaSplitted)==0:
+            continue
+
     #Ad ogni riga contenente 'Node' viene riportato il testo del file in array
-    if "Node " in RigaFile:
-        node=RigaFile.split()            #Ogni riga è una lista con elementi 'stringhe'
-        n=node[3:6]                  #Estrapolo gli elementi relativi alle coordinate
-        n=[(float(i)) for i in n]    #Trasformo le singole stringhe in numeri
-        Node=np.array(n)             #Genero vettori per ogni riga
-        print(Node)                  #Vettori
+    if rigaSplitted[0] == "Node":
+        numNodes= numNodes + 1
+        idNodo = float(rigaSplitted[1])
+        # Estrapolo gli elementi relativi alle coordinate
+        coordXYZ=list(np.float_(rigaSplitted[3:6]))       #float(rigaSplitted[3:6])
+        # aggiungo righe a matrice nodi
+        nodesT.append([idNodo] + coordXYZ)
+        print(nodesT[numNodes - 1])
+        """
+
+    #if rigaSplitted[0] == "Beam":
+        numBeams= numBeams + 1
+        idNodo = float(rigaSplitted[1])
+        # Estrapolo gli elementi relativi alle coordinate
+        coordXYZ=list(np.float_(rigaSplitted[3:6]))       #float(rigaSplitted[3:6])
+        # aggiungo righe a matrice nodi
+        nodesT.append([idNodo] + coordXYZ)
+        print(nodesT[numNodes - 1])
 
     #Stessa cosa per gli elementi   
-    if "BEAM ELEMENTS" in RigaFile:
+    if "BEAM ELEMENTS" in rigaFile:
         print("\n BEAM ELEMENTS:\n")
-    if "Beam  " in RigaFile:
-        beam=RigaFile.split()
+    if "Beam  " in rigaFile:
+        beam=rigaFile.split()
         print(beam[1:6])
         
     #Stessa cosa per i vincoli   
-    if "NODE RESTRAINTS" in RigaFile:
+    if "NODE RESTRAINTS" in rigaFile:
         print("\n NODE RESTRAINTS:\n")
-    if "NdFreedom" in RigaFile:
-        restraint=RigaFile.split()
+    if "NdFreedom" in rigaFile:
+        restraint=rigaFile.split()
         print(restraint[2])
         
     #Stessa cosa per la pretensione in ogni elemento   
-    if "BEAM PRE-LOADS" in RigaFile:
+    if "BEAM PRE-LOADS" in rigaFile:
         print("\n BEAM PRE-LOADS:\n")
-    if "BmPreLoad" in RigaFile:
-        tension=RigaFile.split()
+    if "BmPreLoad" in rigaFile:
+        tension=rigaFile.split()
         print(tension[2:4],)
 
         x=[]                         #Prova costruzione vettore coordinata x                 
@@ -56,4 +81,7 @@ y=np.empty((30,1))                   #Vettore vuoto 30x1 per coordinata Y
 print("\n Y:\n",y)
 z=np.empty((30,1))                   #Vettore vuoto 30x1 per coordinata Z
 print("\n Z:\n",z)
+
+"""
+
 
